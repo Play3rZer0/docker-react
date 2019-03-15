@@ -1,0 +1,106 @@
+Last login: Fri Mar  8 03:47:20 on ttys002
+TemujinMBP:~ vince$ l
+-bash: l: command not found
+TemujinMBP:~ vince$ ls
+Applications		Downloads		Pictures		anaconda3		nltk_data
+Creative Cloud Files	InfoSec			Public			blockgeeks		node_modules
+Desktop			Library			PythonScripts		go			package-lock.json
+DevOps			ML			SSH			iCloud Drive (Archive)	ubuntu32
+Docker			Movies			Techsys			locustenv		venv
+Documents		Music			VirtualBox VMs		locustio		virtmac
+TemujinMBP:~ vince$ cd /volumes
+TemujinMBP:volumes vince$ ls
+BOOTCAMP				NIKON D7000				Vince HD
+My Passport for Mac			Seagate Backup Plus Drive		com.apple.TimeMachine.localsnapshots
+TemujinMBP:volumes vince$ cd "Seagate Backup Plus Drive"
+TemujinMBP:Seagate Backup Plus Drive vince$ ls
+$RECYCLE.BIN			Docker				Photos				System Volume Information
+AWS				MP3				Resume				Tech Presentations
+Archived			Machine Learning		Seagate				Timeline-Newest
+Backup				Misc				Seagate Tools			VM
+Blockgeeks			Models				Shad0ws				Videos
+Development			Music				Software			X-Files
+TemujinMBP:Seagate Backup Plus Drive vince$ cd Docker
+TemujinMBP:Docker vince$ ls
+Docker-Redis-1.txt	Geth			Visits			react-app
+Docker-Redis-2.txt	NodeJS			frontend		redis-image
+TemujinMBP:Docker vince$ ls -l
+total 64
+-rw-r--r--@ 1 vince  staff  12719 Feb 15 13:00 Docker-Redis-1.txt
+-rw-r--r--@ 1 vince  staff  14363 Feb 20 12:46 Docker-Redis-2.txt
+drwxr-xr-x  0 vince  staff      0 Mar  2 01:50 Geth
+drwxr-xr-x  0 vince  staff      0 Feb 16 14:14 NodeJS
+drwxr-xr-x  0 vince  staff      0 Feb 20 14:49 Visits
+drwxr-xr-x  0 vince  staff      0 Feb 21 15:17 frontend
+drwxr-xr-x  0 vince  staff      0 Feb 21 13:13 react-app
+drwxr-xr-x  0 vince  staff      0 Feb 15 10:49 redis-image
+TemujinMBP:Docker vince$ ls
+Docker-Redis-1.txt	Geth			Visits			react-app
+Docker-Redis-2.txt	NodeJS			frontend		redis-image
+TemujinMBP:Docker vince$ cd frontend
+TemujinMBP:frontend vince$ ls
+Dockerfile.dev			Terminal Saved Output-3.txt	docker-compose.yml		src
+README.md			Terminal Saved Output-4.txt	package-lock.json
+Terminal Saved Output-1.txt	Terminal Saved Output-5.txt	package.json
+Terminal Saved Output-2.txt	build				public
+TemujinMBP:frontend vince$ docker-compose up
+Creating network "frontend_default" with the default driver
+Building web
+ERROR: Cannot locate specified Dockerfile: Dockerfile
+TemujinMBP:frontend vince$ docker-compose up
+Building web
+Step 1/6 : FROM node:alpine
+ ---> ebbf98230a82
+Step 2/6 : WORKDIR '/app'
+ ---> Using cache
+ ---> 12bbcca22ea6
+Step 3/6 : COPY package.json .
+ ---> 8e1db5e46295
+Step 4/6 : RUN npm install
+ ---> Running in 0988be51c9bc
+npm WARN deprecated circular-json@0.3.3: CircularJSON is in maintenance only, flatted is its successor.
+npm WARN deprecated kleur@2.0.2: Please upgrade to kleur@3 or migrate to 'ansi-colors' if you prefer the old syntax. Visit <https://github.com/lukeed/kleur/releases/tag/v3.0.0\> for migration path(s).
+npm notice created a lockfile as package-lock.json. You should commit this file.
+npm WARN ts-pnp@1.0.1 requires a peer of typescript@* but none is installed. You must install peer dependencies yourself.
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.4 (node_modules/fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.4: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.7 (node_modules/chokidar/node_modules/fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.7: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+
+added 1813 packages from 718 contributors and audited 36230 packages in 206.591s
+found 63 low severity vulnerabilities
+  run `npm audit fix` to fix them, or `npm audit` for details
+Removing intermediate container 0988be51c9bc
+ ---> 610757187732
+Step 5/6 : COPY . .
+ ---> ed9b14d66186
+Step 6/6 : CMD ["npm", "run", "start"]
+ ---> Running in 975377f2f011
+Removing intermediate container 975377f2f011
+ ---> 9b50a21e2b87
+Successfully built 9b50a21e2b87
+Successfully tagged frontend_web:latest
+WARNING: Image for service web was built because it did not already exist. To rebuild this image you must use `docker-compose build` or `docker-compose up --build`.
+Creating frontend_web_1 ... done
+Attaching to frontend_web_1
+web_1  | 
+web_1  | > frontend@0.1.0 start /app
+web_1  | > react-scripts start
+web_1  | 
+web_1  | Starting the development server...
+web_1  | 
+web_1  | Compiled successfully!
+web_1  | 
+web_1  | You can now view frontend in the browser.
+web_1  | 
+web_1  |   Local:            http://localhost:3000/
+web_1  |   On Your Network:  http://172.18.0.2:3000/
+web_1  | 
+web_1  | Note that the development build is not optimized.
+web_1  | To create a production build, use npm run build.
+web_1  | 
+web_1  | Compiling...
+web_1  | Compiled successfully!
+^CGracefully stopping... (press Ctrl+C again to force)
+Stopping frontend_web_1 ... done
+TemujinMBP:frontend vince$ 

@@ -1,0 +1,124 @@
+ PASS  src/App.test.js
+  ✓ renders without crashing (4ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       1 passed, 1 total
+Snapshots:   0 total
+Time:        0.082s, estimated 1s
+Ran all test suites.
+
+Watch Usage
+ › Press f to run only failed tests.
+ › Press o to only run tests related to changed files.
+ › Press p to filter by a filename regex pattern.
+ › Press q to quit watch mode.
+ › Press t to filter by a test name regex pattern.
+ › Press Enter to trigger a test run.
+
+TemujinMBP:frontend vince$ docker-compose up
+Starting frontend_web_1 ... done
+Attaching to frontend_web_1
+web_1  | 
+web_1  | > frontend@0.1.0 start /app
+web_1  | > react-scripts start
+web_1  | 
+web_1  | Starting the development server...
+web_1  | 
+web_1  | Compiled successfully!
+web_1  | 
+web_1  | You can now view frontend in the browser.
+web_1  | 
+web_1  |   Local:            http://localhost:3000/
+web_1  |   On Your Network:  http://172.18.0.2:3000/
+web_1  | 
+web_1  | Note that the development build is not optimized.
+web_1  | To create a production build, use npm run build.
+web_1  | 
+Killing frontend_web_1  ... done
+TemujinMBP:frontend vince$ docker-compose up --build
+Building web
+Step 1/6 : FROM node:alpine
+ ---> ebbf98230a82
+Step 2/6 : WORKDIR '/app'
+ ---> Using cache
+ ---> 12bbcca22ea6
+Step 3/6 : COPY package.json .
+ ---> Using cache
+ ---> 8e1db5e46295
+Step 4/6 : RUN npm install
+ ---> Using cache
+ ---> 610757187732
+Step 5/6 : COPY . .
+ ---> acaae6bddf77
+Step 6/6 : CMD ["npm", "run", "start"]
+ ---> Running in ac0813f7a317
+Removing intermediate container ac0813f7a317
+ ---> 52af73c2c993
+Successfully built 52af73c2c993
+Successfully tagged frontend_web:latest
+Building tests
+Step 1/6 : FROM node:alpine
+ ---> ebbf98230a82
+Step 2/6 : WORKDIR '/app'
+ ---> Using cache
+ ---> 12bbcca22ea6
+Step 3/6 : COPY package.json .
+ ---> Using cache
+ ---> 8e1db5e46295
+Step 4/6 : RUN npm install
+ ---> Using cache
+ ---> 610757187732
+Step 5/6 : COPY . .
+ ---> Using cache
+ ---> acaae6bddf77
+Step 6/6 : CMD ["npm", "run", "start"]
+ ---> Using cache
+ ---> 52af73c2c993
+Successfully built 52af73c2c993
+Successfully tagged frontend_tests:latest
+Recreating frontend_web_1 ... done
+Creating frontend_tests_1 ... done
+Attaching to frontend_web_1, frontend_tests_1
+web_1    | 
+web_1    | > frontend@0.1.0 start /app
+web_1    | > react-scripts start
+web_1    | 
+web_1    | Starting the development server...
+web_1    | 
+web_1    | Compiled successfully!
+web_1    | 
+web_1    | You can now view frontend in the browser.
+web_1    | 
+web_1    |   Local:            http://localhost:3000/
+web_1    |   On Your Network:  http://172.18.0.2:3000/
+web_1    | 
+web_1    | Note that the development build is not optimized.
+web_1    | To create a production build, use npm run build.
+web_1    | 
+tests_1  | 
+tests_1  | > frontend@0.1.0 test /app
+tests_1  | > react-scripts test
+tests_1  | 
+tests_1  | PASS src/App.test.js
+tests_1  |   ✓ renders without crashing (23ms)
+tests_1  | 
+tests_1  | Test Suites: 1 passed, 1 total
+tests_1  | Tests:       1 passed, 1 total
+tests_1  | Snapshots:   0 total
+tests_1  | Time:        2.267s
+tests_1  | Ran all test suites.
+tests_1  | 
+tests_1  | PASS src/App.test.js
+tests_1  |   ✓ renders without crashing (24ms)
+tests_1  |   ✓ renders without crashing (3ms)
+tests_1  | 
+tests_1  | Test Suites: 1 passed, 1 total
+tests_1  | Tests:       2 passed, 2 total
+tests_1  | Snapshots:   0 total
+tests_1  | Time:        1.935s, estimated 2s
+tests_1  | Ran all test suites.
+tests_1  | 
+
+
+w
+

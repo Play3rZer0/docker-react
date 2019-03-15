@@ -1,0 +1,52 @@
+No tests found related to files changed since last commit.
+Press `a` to run all tests, or run Jest with `--watchAll`.
+
+Watch Usage
+ › Press a to run all tests.
+ › Press f to run only failed tests.
+ › Press p to filter by a filename regex pattern.
+ › Press q to quit watch mode.
+ › Press t to filter by a test name regex pattern.
+ › Press Enter to trigger a test run.
+
+
+TemujinMBP:frontend vince$ npm run build
+
+> frontend@0.1.0 build /Volumes/Seagate Backup Plus Drive/Docker/react-app/frontend
+> react-scripts build
+
+Creating an optimized production build...
+  [Restored Feb 21, 2019 at 1:25:25 PM]
+## cd /volumes/Seagate Backup Plus Drive/Docker/react-app/frontend ##
+Last login: Thu Feb 21 13:25:24 on ttys000
+TemujinMBP:~ vince$ ls
+Applications		Documents		Music			Techsys			iCloud Drive (Archive)	package-lock.json
+Creative Cloud Files	Downloads		Pictures		VirtualBox VMs		locustenv		ubuntu32
+Desktop			Library			Public			anaconda3		locustio		venv
+DevOps			ML			PythonScripts		blockgeeks		nltk_data		virtmac
+Docker			Movies			SSH			go			node_modules
+TemujinMBP:~ vince$ cd Docker
+TemujinMBP:Docker vince$ ls
+Dockerfile		app.py			basicdocker		requirements.txt
+TemujinMBP:Docker vince$ ls
+Dockerfile		app.py			basicdocker		requirements.txt
+TemujinMBP:Docker vince$ cd /volumes
+TemujinMBP:volumes vince$ ls
+BOOTCAMP				NIKON D7000				com.apple.TimeMachine.localsnapshots
+My Passport for Mac			Vince HD
+TemujinMBP:volumes vince$ cd /volumes
+TemujinMBP:volumes vince$ ls
+BOOTCAMP				NIKON D7000				Vince HD
+My Passport for Mac			Seagate Backup Plus Drive		com.apple.TimeMachine.localsnapshots
+TemujinMBP:volumes vince$ cd "Seagate Backup Plus Drive"
+TemujinMBP:Seagate Backup Plus Drive vince$ ls
+$RECYCLE.BIN			Development			Models				Seagate Tools			Timeline-Newest
+AWS				Docker				Music				Shad0ws				VM
+Archived			MP3				Photos				Software			Videos
+Backup				Machine Learning		Resume				System Volume Information	X-Files
+Blockgeeks			Misc				Seagate				Tech Presentations
+TemujinMBP:Seagate Backup Plus Drive vince$ pwd
+/volumes/Seagate Backup Plus Drive
+TemujinMBP:Seagate Backup Plus Drive vince$ pwd
+/volumes/Seagate Backup Plus Drive
+TemujinMBP:Seagate Backup Plus Drive vince$ 
